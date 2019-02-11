@@ -36,4 +36,12 @@ class ControllerNegociacao {
     this._inputValor.value = 0.0;
     this._inputData.focus();
   }
+
+  apaga(){
+    this._listaNegociacoes.apaga();
+    this._negociacoesView.update(this._listaNegociacoes);
+    this._mensagem.texto ="Apagado com sucesso";
+    this._mensagemView.update(this._mensagem);
+
+  }
 }
