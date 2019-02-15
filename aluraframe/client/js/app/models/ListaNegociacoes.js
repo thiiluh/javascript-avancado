@@ -1,5 +1,5 @@
 class ListaNegociacoes {
-  constructor() {
+  constructor( ) {
     this._negociacoes = [];
   }
 
