@@ -32,18 +32,13 @@ class ControllerNegociacao {
       negociacaoService.obterNegociacoesSemana(),
       negociacaoService.obterNegociacoesSemanaAnterior(),
       negociacaoService.obterNegociacoesSemanaRetrasada()
-      
     ])
       .then(negociacao =>
         negociacao
-          .reduce((novoArray, array) => 
-             novoArray.concat(array), []
-          )
+          .reduce((novoArray, array) => novoArray.concat(array), [])
           .forEach(elem => this._listaNegociacoes.adiciona(elem))
       )
-      .catch(erro => this._mensagem.texto = erro);
-
-    
+      .catch(erro => (this._mensagem.texto = erro));
   }
 
   _criaNegociacao() {
